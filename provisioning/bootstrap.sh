@@ -20,7 +20,7 @@ if [ -f "$PROVISIONED_ON" ]
   sudo apt-get install -y apache2 libapache2-mod-php7.3 libapache2-mod-fastcgi php-pear
   # PHP
   sudo apt-get update
-  sudo apt-get install -y php7.3 php7.3-pgsql php7.3-gd php7.3-mbstring php7.3-cli php7.3-fpm php7.3-common php7.3-xml php7.3-curl
+  sudo apt-get install -y php7.3 php7.3-pgsql php7.3-gd php7.3-mbstring php7.3-cli php7.3-fpm php7.3-common php7.3-xml php7.3-curl zip unzip php7.3-zip
   # Composer
   sudo apt-get update
   sudo apt-get install -y curl
