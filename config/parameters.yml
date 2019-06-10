@@ -1,0 +1,7 @@
+parameters:
+    database.driver: pdo_pgsql
+    database.host: 127.0.0.1
+    database.port: 5432
+    database.name: eemayshop
+    database.user: eemayshop
+    database.password: emma

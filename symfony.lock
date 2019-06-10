@@ -69,6 +69,9 @@
     "doctrine/orm": {
         "version": "v2.5.14"
     },
+    "doctrine/persistence": {
+        "version": "1.1.1"
+    },
     "easycorp/easy-log-handler": {
         "version": "1.0",
         "recipe": {
