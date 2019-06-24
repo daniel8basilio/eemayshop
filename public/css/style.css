@@ -164,7 +164,7 @@ a.article:hover {
     width: 100%;
 }
 
-#content .container-fluid .page-header {
+#content .page-header {
     display: inline-block;
     margin-bottom: 0px;
     vertical-align: middle;

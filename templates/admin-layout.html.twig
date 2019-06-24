@@ -93,16 +93,13 @@
             <!-- Page Content  -->
             <div id="content">
 
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <div>
-                            <button type="button" id="sidebarCollapse" class="btn btn-light">
-                                <i class="fa fa-arrow-left"></i>
-                            </button>
-                            <h3 class="page-header">{% block page_header %}{% endblock %}<h3>
-                        </div>
-                    </div>
-                </nav>
+                <div>
+                    <button type="button" id="sidebarCollapse" class="btn btn-light">
+                        <i class="fa fa-arrow-left"></i>
+                    </button>
+                    <h3 class="page-header">{% block page_header %}{% endblock %}</h3>
+                    <hr />
+                </div>
 
                 {% block content %}{% endblock %}
             </div>
