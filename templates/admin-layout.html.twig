@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+         <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="js/admin-main.js"></script>
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Nerdy Eemay Shop</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>Logged in as Emma</p>
+                    {% set pageName = app.request.get('_route') %}
+                    <li {% if pageName == 'admin_home' %}class="active"{% endif %}>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                        <ul class="collapse list-unstyled {{pageName == 'admin_home' ? 'show' : ''}}" id="homeSubmenu">
+                            <li {% if pageName == 'admin_home' %}class="active"{% endif %}>
+                                <a href="#">My Calendar</a>
+                            </li>
+                            <li>
+                                <a href="#">Shop Info</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#customerSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Customers</a>
+                        <ul class="collapse list-unstyled" id="customerSubmenu">
+                            <li>
+                                <a href="#">Customer List</a>
+                            </li>
+                            <li>
+                                <a href="#">Customer Registration</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
+                        <ul class="collapse list-unstyled" id="productSubmenu">
+                            <li>
+                                <a href="#">Product List</a>
+                            </li>
+                            <li>
+                                <a href="#">Product Registration</a>
+                            </li>
+                            <li>
+                                <a href="#">Product Categories</a>
+                            </li>
+                            <li>
+                                <a href="#">Product Status</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#orderSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Orders</a>
+                        <ul class="collapse list-unstyled" id="orderSubmenu">
+                            <li>
+                                <a href="#">Order List</a>
+                            </li>
+                            <li>
+                                <a href="#">Order Registration</a>
+                            </li>
+                            <li>
+                                <a href="#">Order Status</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Reports</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <div>
+                            <button type="button" id="sidebarCollapse" class="btn btn-light">
+                                <i class="fa fa-arrow-left"></i>
+                            </button>
+                            <h3 class="page-header">{% block page_header %}{% endblock %}<h3>
+                        </div>
+                    </div>
+                </nav>
+
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+
+        {% block javascripts %}{% endblock %}
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    </body>
+</html>
