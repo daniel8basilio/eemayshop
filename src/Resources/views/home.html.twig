@@ -1,6 +1,15 @@
 {% extends 'admin-layout.html.twig' %}
 
 {% block page_header %}My Calendar{% endblock %}
+{% block javascripts %}
+<script src="js/calendar.js"></script>
+{% endblock %}
 {% block content %}
-Contents
+<div class="row">
+    <div class="col-5">
+        {% include 'fragments/calendar.twig' %}
+    </div>
+    <div class="col-7">
+    <div>
+</div>
 {% endblock %}

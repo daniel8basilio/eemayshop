@@ -1,4 +1,5 @@
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
@@ -25,7 +26,7 @@ a:focus {
     background: #fff;
     border: none;
     border-radius: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -151,7 +152,7 @@ a.article:hover {
 
 #content {
     width: calc(100% - 250px);
-    padding: 40px;
+    padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
@@ -189,4 +190,56 @@ a.article:hover {
     #sidebarCollapse span {
         display: none;
     }
+}
+
+/* ---------------------------------------------------
+    Calendar
+----------------------------------------------------- */
+.my-calendar {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    padding-left: 20px;
+}
+.my-calendar .calendar-header-title {
+    font-weight: lighter;
+    font-size: 2em;
+}
+.my-calendar .btn-outline-warning:not(.active) {
+    color: #FFD300 !important;
+    border-color: #FFD300 !important;
+}
+.my-calendar .btn-outline-warning.active, .my-calendar .btn-outline-warning:hover, .my-calendar .calendar-day .col:hover {
+    color: #fff !important;
+    background-color: #FFD300;
+}
+.my-calendar .calendar-day-header {
+    color: #fff;
+    background-color: #FFD300;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.my-calendar .calendar-day .col {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+    height: 50px;
+    font-size: 0.8em;
+    padding-top: 10px;
+}
+.my-calendar .calendar-day .col:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+.my-calendar .calendar-day .col:first-child {
+    border-left: 1px solid #ddd;
+    color: #f8df67;
+}
+.my-calendar .calendar-body div .calendar-day:nth-child(2) .col {
+    border-top: 1px solid #ddd;
+}
+.my-calendar .calendar-day .col.current-date span {
+    background-color: #f8df67;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 12px;
 }
