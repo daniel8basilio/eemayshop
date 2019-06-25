@@ -1,1 +1,0 @@
-{"virtualbox":{"/var/www/eemayshop":{"mount_options":["dmode=777","fmode=777","uid=1000","gid=1000"],"guestpath":"/var/www/eemayshop","hostpath":"/Users/ronya/practice-projects/eemayshop","disabled":false,"__vagrantfile":true}}}
