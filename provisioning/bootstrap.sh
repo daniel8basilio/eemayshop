@@ -72,7 +72,7 @@ CREATE DATABASE $APP_DB_NAME WITH OWNER=$APP_DB_USER
 EOF
 
   # Overwrite the default hosted directory
-  sudo cp /vagrant/provisioning/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
+  sudo cp /var/www/eemayshop/provisioning/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
 
   # Enable PHP 7.3 fpm and fast_cgi module.
   sudo a2enmod proxy_fcgi

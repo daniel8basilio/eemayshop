@@ -23,6 +23,7 @@ After successfully running `vagrant up`, enter the virtual machine and install t
 
 ```
 $ vagrant ssh
+$ cd /var/www/eemayshop
 $ composer install
 ```
 
